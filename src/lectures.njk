@@ -1,0 +1,26 @@
+---
+layout: layout.njk
+title: Lectures
+description: Lecture notes and materials for Autonomous Software Engineering.
+permalink: /lectures/
+---
+<header class="page-header">
+  <p class="eyebrow">{{ site.shortName }}</p>
+  <h1>Lectures</h1>
+  <p>Notes and materials are published here as the course progresses.</p>
+</header>
+
+<section class="section-rule">
+  {% if collections.lectures.length %}
+    <ol class="notes-list">
+      {% for lecture in collections.lectures %}<li><a href="{{ lecture.url }}"><span>{{ lecture.data.order or "—" }}</span><strong>{{ lecture.data.title }}</strong><small>{{ lecture.data.description or lecture.data.module or "Lecture note" }}</small></a></li>{% endfor %}
+    </ol>
+  {% else %}
+    <p class="notice">No lecture notes are published yet. Add a Markdown file in <code>src/lectures/</code> to publish one.</p>
+  {% endif %}
+</section>
+
+<section class="section-rule">
+  <h2>Planned sequence</h2>
+  <ol class="compact-list">{% for unit in course.units %}<li><a href="{{ '/modules/' | url }}#unit-{{ unit.number }}"><span>{{ unit.number }}</span>{{ unit.title }}</a></li>{% endfor %}</ol>
+</section>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#173f73">
+    <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="author" content="{{ course.instructor }}">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
+  </head>
+  <body class="libdoc-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="libdoc-frame">
+      <aside class="libdoc-sidebar">
+        <a class="libdoc-brand" href="{{ '/' | url }}" aria-label="{{ site.name }}, home">{{ site.shortName }}</a>
+        <p class="libdoc-term">{{ site.semester }}<br>{{ site.institution }}</p>
+        <nav aria-label="Course sections">
+          <ul class="libdoc-nav">
+            {% for item in site.navigation %}
+              <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <p class="libdoc-side-note">Static course site<br>No tracking or web fonts</p>
+      </aside>
+      <div class="libdoc-content">
+        <main id="main-content">
+          <div class="libdoc-main">
+            {{ content | safe }}
+          </div>
+        </main>
+        <footer class="libdoc-footer">
+          <a href="https://karthikvaidhyanathan.com" rel="me">Copyright © Karthik Vaidhyanathan</a>
+          <span>Inspired by <a href="https://eleventy-libdoc.netlify.app/">Eleventy LibDoc</a></span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

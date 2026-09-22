@@ -1,0 +1,15 @@
+---
+layout: layout.njk
+---
+<article class="lecture-page">
+  <header class="page-header">
+    <p class="eyebrow">Lecture{% if order %} {{ order }}{% endif %}{% if module %} · {{ module }}{% endif %}</p>
+    <h1>{{ title }}</h1>
+    {% if description %}<p>{{ description }}</p>{% endif %}
+    {% if date %}<p class="term-line">{{ date }}</p>{% endif %}
+  </header>
+  <div class="markdown-content section-rule">
+    {{ content | safe }}
+  </div>
+  <p class="back-link"><a href="{{ '/lectures/' | url }}">← Lectures</a></p>
+</article>

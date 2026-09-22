@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#174eb0">
+    <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
+  </head>
+  <body class="libdoc-body">
+    <a class="libdoc-skip" href="#main-content">Skip to content</a>
+    <div class="libdoc-frame">
+      <aside class="libdoc-sidebar">
+        <a class="libdoc-brand" href="{{ '/libdoc-preview/' | url }}">AutoSE</a>
+        <p class="libdoc-term">{{ site.semester }}<br>{{ site.institution }}</p>
+        <nav aria-label="Course sections">
+          <ul class="libdoc-nav">
+            <li><a href="{{ '/libdoc-preview/' | url }}" aria-current="page">Overview</a></li>
+            <li><a href="{{ '/modules/' | url }}">Course plan</a></li>
+            <li><a href="{{ '/lectures/' | url }}">Lectures</a></li>
+            <li><a href="{{ '/tutorials/' | url }}">Tutorials</a></li>
+            <li><a href="{{ '/projects/' | url }}">Project</a></li>
+            <li><a href="{{ '/calendar/' | url }}">Calendar</a></li>
+            <li><a href="{{ '/policies/' | url }}">Policy</a></li>
+            <li><a href="{{ '/resources/' | url }}">Resources</a></li>
+          </ul>
+        </nav>
+        <p class="libdoc-side-note">Static course site<br>No tracking or web fonts</p>
+      </aside>
+      <main id="main-content">
+        <div class="libdoc-main">
+          {{ content | safe }}
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

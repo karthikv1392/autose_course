@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+title: Home
+description: Autonomous Software Engineering, Monsoon 2026.
+---
+<header class="page-header home-header">
+  <p class="eyebrow">CSE · IIIT Hyderabad</p>
+  <h1>Autonomous Software Engineering</h1>
+  <p class="term-line">{{ site.semester }} · {{ course.credits }} credits · L–T–P {{ course.ltp }}</p>
+</header>
+
+<section class="intro-grid section-rule">
+  <div>
+    <h2>Course overview</h2>
+    <p>This course studies how AI agents can support software engineering work across requirements, architecture, coding, testing, and operations.</p>
+    <p>The emphasis is on building harnesses that combine models, tools, memory, and evaluation. We will work with OpenCode, Claude Code, and GitHub Copilot, and build our own harnesses throughout the course. We will also examine where human-in-the-loop review is needed—and how people and agents can work together when judgment and accountability matter.</p>
+  </div>
+  <aside class="facts-box" aria-label="Course information">
+    <dl>
+      <div><dt>Instructor</dt><dd>{{ course.instructor }}</dd></div>
+      <div><dt>Course code</dt><dd>{{ course.code }}</dd></div>
+      <div><dt>Intake</dt><dd>{{ course.intake }}</dd></div>
+      <div><dt>Prerequisite</dt><dd>{{ course.prerequisite }}</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section class="section-rule">
+  <h2>Course information</h2>
+  <div class="link-grid">
+    <a href="{{ '/modules/' | url }}"><strong>Course plan</strong><span>Topics and course outcomes</span></a>
+    <a href="{{ '/team/' | url }}"><strong>Course team</strong><span>Instructor and teaching assistant</span></a>
+    <a href="{{ '/lectures/' | url }}"><strong>Lectures</strong><span>Notes and class materials</span></a>
+    <a href="{{ '/projects/' | url }}"><strong>Project</strong><span>Build a harness for an autonomous SE task</span></a>
+    <a href="{{ '/tutorials/' | url }}"><strong>Tutorials</strong><span>Hands-on sessions</span></a>
+    <a href="{{ '/calendar/' | url }}"><strong>Calendar</strong><span>Dates and deadlines</span></a>
+    <a href="{{ '/resources/' | url }}"><strong>Resources</strong><span>References and tools</span></a>
+  </div>
+</section>
+
+<section class="home-columns section-rule">
+  <div>
+    <h2>Topics</h2>
+    <ol class="compact-list">
+      {% for unit in course.units %}<li><a href="{{ '/modules/' | url }}#unit-{{ unit.number }}"><span>{{ unit.number }}</span>{{ unit.title }}</a></li>{% endfor %}
+    </ol>
+  </div>
+  <div>
+    <h2>Assessment</h2>
+    <dl class="assessment-list">
+      {% for item in course.assessment %}<div><dt>{{ item.item }}</dt><dd>{{ item.weight }}</dd></div>{% endfor %}
+    </dl>
+  </div>
+</section>

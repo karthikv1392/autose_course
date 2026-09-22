@@ -1,0 +1,43 @@
+---
+layout: libdoc-layout.njk
+title: Documentation prototype
+description: A LibDoc-inspired alternative design for the Autonomous Software Engineering course site.
+permalink: /libdoc-preview/
+---
+<header class="libdoc-page-header">
+  <p class="libdoc-crumb">AutoSE <span>/</span> Overview</p>
+  <h1>Autonomous<br>Software Engineering</h1>
+  <p class="libdoc-subtitle">Course information, notes, and materials for {{ site.semester }}.</p>
+  <div class="libdoc-meta"><span>{{ course.credits }} credits</span><span>{{ course.ltp }}</span><span>Instructor: {{ course.instructor }}</span></div>
+</header>
+
+<nav class="libdoc-toc" aria-label="On this page">
+  <p>On this page</p>
+  <a href="#overview">Overview</a>
+  <a href="#topics">Topics</a>
+  <a href="#assessment">Assessment</a>
+</nav>
+
+<section id="overview" class="libdoc-section">
+  <h2>Overview</h2>
+  <p>This course examines how agentic systems can support software engineering work: from requirements and architecture through implementation, testing, and operations.</p>
+  <div class="libdoc-facts">
+    <div><span>Course code</span><strong>{{ course.code }}</strong></div>
+    <div><span>Intake</span><strong>{{ course.intake }}</strong></div>
+    <div><span>Prerequisite</span><strong>{{ course.prerequisite }}</strong></div>
+  </div>
+</section>
+
+<section id="topics" class="libdoc-section">
+  <h2>Topics</h2>
+  <ol class="libdoc-topics">
+    {% for unit in course.units %}<li><span>{{ unit.number }}</span><a href="{{ '/modules/' | url }}#unit-{{ unit.number }}">{{ unit.title }}</a></li>{% endfor %}
+  </ol>
+</section>
+
+<section id="assessment" class="libdoc-section">
+  <h2>Assessment</h2>
+  <dl class="libdoc-assessment">
+    {% for item in course.assessment %}<div><dt>{{ item.item }}</dt><dd>{{ item.weight }}</dd></div>{% endfor %}
+  </dl>
+</section>

@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+title: Tutorials
+description: Tutorial sequence for Autonomous Software Engineering.
+permalink: /tutorials/
+---
+<header class="page-header">
+  <p class="eyebrow">Hands-on sessions</p>
+  <h1>Tutorials</h1>
+  <p>Four practical sessions using open-source agentic tools.</p>
+</header>
+
+<section class="section-rule">
+  <ol class="plan-list short-list">
+    {% for session in course.tutorials.sessions %}<li><span>{{ session.number }}</span><div><h2>{{ session.title }}</h2><p>{{ session.focus }}</p></div></li>{% endfor %}
+  </ol>
+</section>

@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+title: Course plan
+description: Topics and outcomes for Autonomous Software Engineering.
+permalink: /modules/
+---
+<header class="page-header">
+  <p class="eyebrow">{{ site.shortName }}</p>
+  <h1>Course plan</h1>
+  <p>Seven key areas, class activities, assignments, and a team project.</p>
+</header>
+
+<section class="section-rule">
+  <ol class="plan-list">
+    {% for unit in course.units %}
+      <li id="unit-{{ unit.number }}"><span>{{ unit.number }}</span><div><h2>{{ unit.title }}</h2><p>{{ unit.summary }}</p></div></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="two-column section-rule">
+  <div><h2>Course components</h2><ul class="plain-list"><li>Class activities</li><li>Take-home assignments</li><li>Team project</li></ul></div>
+  <div><h2>Course outcomes</h2><ol class="outcome-list">{% for outcome in course.outcomes %}<li><span>{{ outcome.code }}</span>{{ outcome.text }}</li>{% endfor %}</ol></div>
+</section>

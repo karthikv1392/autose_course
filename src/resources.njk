@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+title: Resources
+description: Reference materials for Autonomous Software Engineering.
+---
+<header class="page-header">
+  <p class="eyebrow">Reading and tools</p>
+  <h1>Resources</h1>
+  <p>Core references from the course proposal.</p>
+</header>
+
+<section class="section-rule">
+  <ol class="reference-list">
+    {% for reference in course.references %}
+      <li><span>{{ reference.year }}</span><div><strong>{% if reference.url %}<a href="{{ reference.url }}">{{ reference.title }}</a>{% else %}{{ reference.title }}{% endif %}</strong><small>{{ reference.author }}{% if reference.note %} · {{ reference.note }}{% endif %}</small></div></li>
+    {% endfor %}
+  </ol>
+</section>
