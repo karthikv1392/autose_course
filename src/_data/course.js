@@ -90,12 +90,12 @@ export default {
   calendar: {
     lectures: [
       { number: 1, date: "Mon, 28 Sep", detail: "Lecture 01 · Introduction and Course Overview" },
-      { number: 2, date: "Mon, 5 Oct", detail: "Lecture 02" },
-      { number: 3, date: "Thu, 8 Oct", detail: "Lecture 03" },
-      { number: 4, date: "Mon, 12 Oct", detail: "Lecture 04" },
-      { number: 5, date: "Thu, 15 Oct", detail: "Lecture 05" },
-      { number: 6, date: "Mon, 19 Oct", detail: "Lecture 06" },
-      { number: 7, date: "Thu, 22 Oct", detail: "Lecture 07" },
+      { number: 2, date: "Mon, 5 Oct", detail: "Lecture 02 · Introduction to AI Agents" },
+      { number: 3, date: "Thu, 8 Oct", detail: "Lecture 03 · Tools, MCP, Skills and More" },
+      { number: 4, date: "Mon, 12 Oct", detail: "Lecture 04 · Spec-driven Development" },
+      { number: 5, date: "Thu, 15 Oct", detail: "Lecture 05 · Specs to Design" },
+      { number: 6, date: "Mon, 19 Oct", detail: "Lecture 06 · Agentic Architecting" },
+      { number: 7, date: "Thu, 22 Oct", detail: "Lecture 07 · Anatomy of a Coding Agent" },
       { number: 8, date: "Mon, 26 Oct", detail: "Lecture 08" },
       { number: 9, date: "Thu, 29 Oct", detail: "Lecture 09" },
       { number: 10, date: "Mon, 2 Nov", detail: "Lecture 10" },
