@@ -87,6 +87,30 @@ export default {
     { item: "Take-home assignments", detail: "2 assignments", weight: "20%" },
     { item: "Course project and presentations", detail: "Team-based", weight: "60%" }
   ],
+  calendar: {
+    lectures: [
+      { date: "Mon, 28 Sep", detail: "Lecture 01 · Introduction and Course Overview" },
+      { date: "Mon, 5 Oct", detail: "Lecture 02" },
+      { date: "Thu, 8 Oct", detail: "Lecture 03" },
+      { date: "Mon, 12 Oct", detail: "Lecture 04" },
+      { date: "Thu, 15 Oct", detail: "Lecture 05" },
+      { date: "Mon, 19 Oct", detail: "Lecture 06" },
+      { date: "Thu, 22 Oct", detail: "Lecture 07" },
+      { date: "Mon, 26 Oct", detail: "Lecture 08" },
+      { date: "Thu, 29 Oct", detail: "Lecture 09" },
+      { date: "Mon, 2 Nov", detail: "Lecture 10" },
+      { date: "Thu, 5 Nov", detail: "Lecture 11" },
+      { date: "Thu, 12 Nov", detail: "Lecture 12" },
+      { date: "Mon, 16 Nov", detail: "Lecture 13" },
+      { date: "Thu, 19 Nov", detail: "Lecture 14 · Last day of classwork" }
+    ],
+    keyDates: [
+      { date: "Tue, 13 Oct", detail: "Assignment release · after Lecture 04" },
+      { date: "Tue, 27 Oct", detail: "Assignment release · after Lecture 08" },
+      { date: "Fri, 13 Nov", detail: "Assignment release · after Lecture 12" },
+      { date: "Tue, 1 Dec", detail: "Final course-project submission deadline" }
+    ]
+  },
   references: [
     {
       author: "Hassan, E. A.",

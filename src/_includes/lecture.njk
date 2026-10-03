@@ -6,7 +6,7 @@ layout: layout.njk
     <p class="eyebrow">Lecture{% if order %} {{ order }}{% endif %}{% if module %} · {{ module }}{% endif %}</p>
     <h1>{{ title }}</h1>
     {% if description %}<p>{{ description }}</p>{% endif %}
-    {% if date %}<p class="term-line">{{ date }}</p>{% endif %}
+    {% if classDate %}<p class="term-line">{{ classDate }}</p>{% endif %}
   </header>
   <div class="markdown-content section-rule">
     {{ content | safe }}

@@ -7,15 +7,20 @@ permalink: /calendar/
 <header class="page-header">
   <p class="eyebrow">{{ site.semester }}</p>
   <h1>Calendar</h1>
-  <p>Lecture dates, deadlines, and room information will be posted here.</p>
+  <p>Mondays and Thursdays · 2:00–3:30 PM</p>
 </header>
 
 <section class="section-rule">
-  <p class="notice">The detailed calendar has not been published yet.</p>
+  <p class="notice">The schedule follows the Monsoon 2026 almanac. There is no lecture on Thu, 1 Oct (Friday timetable) or Mon, 9 Nov (no classwork).</p>
+  <h2>Lecture meetings</h2>
   <dl class="calendar-list">
-    <div><dt>Lectures</dt><dd>To be announced</dd></div>
-    <div><dt>Tutorials</dt><dd>To be announced</dd></div>
-    <div><dt>Assignments</dt><dd>To be announced</dd></div>
-    <div><dt>Project presentations</dt><dd>To be announced</dd></div>
+    {% for lecture in course.calendar.lectures %}<div><dt>{{ lecture.date }}</dt><dd>{{ lecture.detail }}</dd></div>{% endfor %}
+  </dl>
+</section>
+
+<section class="section-rule">
+  <h2>Key dates</h2>
+  <dl class="calendar-list">
+    {% for event in course.calendar.keyDates %}<div><dt>{{ event.date }}</dt><dd>{{ event.detail }}</dd></div>{% endfor %}
   </dl>
 </section>

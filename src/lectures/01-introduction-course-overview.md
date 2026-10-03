@@ -3,6 +3,7 @@ title: Introduction and Course Overview
 description: An introduction to Autonomous Software Engineering and the course structure.
 order: 1
 module: Foundations of Agentic AI
+classDate: 28 September 2026
 ---
 
 ## Materials

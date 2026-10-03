@@ -3,7 +3,7 @@ title: Lecture 01 Title
 description: One sentence describing the lecture.
 order: 1
 module: Foundations of Agentic AI
-date: TBA
+classDate: TBA
 ---
 
 ## Why this matters
