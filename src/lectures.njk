@@ -13,7 +13,7 @@ permalink: /lectures/
 <section class="section-rule">
   {% if collections.lectures.length %}
     <ol class="notes-list">
-      {% for lecture in collections.lectures %}<li><a href="{{ lecture.url }}"><span>{{ lecture.data.order or "—" }}</span><strong>{{ lecture.data.title }}</strong><small>{{ lecture.data.description or lecture.data.module or "Lecture note" }}</small></a></li>{% endfor %}
+      {% for lecture in collections.lectures %}<li><a href="{{ lecture.url | url }}"><span>{{ lecture.data.order or "—" }}</span><strong>{{ lecture.data.title }}</strong><small>{{ lecture.data.description or lecture.data.module or "Lecture note" }}</small></a></li>{% endfor %}
     </ol>
   {% else %}
     <p class="notice">No lecture notes are published yet. Add a Markdown file in <code>src/lectures/</code> to publish one.</p>
