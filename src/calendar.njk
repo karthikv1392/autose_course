@@ -14,7 +14,10 @@ permalink: /calendar/
   <p class="notice">The schedule follows the Monsoon 2026 almanac. There is no lecture on Thu, 1 Oct (Friday timetable) or Mon, 9 Nov (no classwork).</p>
   <h2>Lecture meetings</h2>
   <dl class="calendar-list">
-    {% for lecture in course.calendar.lectures %}<div><dt>{{ lecture.date }}</dt><dd>{{ lecture.detail }}</dd></div>{% endfor %}
+    {% for lecture in course.calendar.lectures %}
+      {% set note = collections.lectures | lectureForNumber(lecture.number) %}
+      <div><dt>{{ lecture.date }}</dt><dd>{% if note %}<a href="{{ note.url | url }}">{{ lecture.detail }}</a>{% else %}{{ lecture.detail }}{% endif %}</dd></div>
+    {% endfor %}
   </dl>
 </section>
 

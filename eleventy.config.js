@@ -7,6 +7,9 @@ export default function (eleventyConfig) {
       .filter((item) => item.data.draft !== true)
       .sort((left, right) => (left.data.order ?? 999) - (right.data.order ?? 999))
   );
+  eleventyConfig.addFilter("lectureForNumber", (lectures, number) =>
+    lectures.find((lecture) => Number(lecture.data.order) === Number(number))
+  );
 
   return {
     pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
