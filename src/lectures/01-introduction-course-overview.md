@@ -10,6 +10,11 @@ classDate: 28 September 2026
 
 [View the lecture slides (PDF)](https://www.dropbox.com/scl/fi/0kxkkn43b9y539kacfnnz/L01_Overview.pdf?rlkey=lz2yzsn33qmokp71ttvxgpoif&st=oyj1das8&dl=0)
 
+## Further reading
+
+1. [Building the machine](https://janbosch.com/155/)
+2. [Towards AI-Native Software Engineering (SE 3.0): A Vision and a Challenge Roadmap](https://dl.acm.org/doi/epdf/10.1145/3807901)
+
 ## Overview
 
 The opening lecture introduces Autonomous Software Engineering, the structure of the course, and the work we will undertake through class activities, assignments, and the team project.
