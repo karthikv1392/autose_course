@@ -14,6 +14,8 @@ classDate: 28 September 2026
 
 1. [Building the machine](https://janbosch.com/155/)
 2. [Towards AI-Native Software Engineering (SE 3.0): A Vision and a Challenge Roadmap](https://dl.acm.org/doi/epdf/10.1145/3807901)
+3. [Agents and Software Engineering Seminar Outcomes](https://arxiv.org/pdf/2605.11720v1)
+4. [Vision of Autonomic Computing](https://ieeexplore.ieee.org/document/1160055/)
 
 ## Overview
 
