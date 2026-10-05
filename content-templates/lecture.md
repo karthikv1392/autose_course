@@ -6,6 +6,12 @@ module: Foundations of Agentic AI
 classDate: TBA
 ---
 
+## Class materials
+
+- [Open the Colab notebook](https://example.com)
+- [View the GitHub repository](https://github.com/example/repository)
+- [View the lecture slides](https://example.com)
+
 ## Why this matters
 
 Write the main idea for the lecture here.
@@ -13,7 +19,7 @@ Write the main idea for the lecture here.
 ## In class
 
 - Add activities, examples, or discussion prompts.
-- Link to a repository, slide deck, or reading where useful.
+- Add or remove material links above as needed.
 
 ## Reading
 
