@@ -6,6 +6,10 @@ module: Foundations of Agentic AI
 classDate: TBA
 ---
 
+## Overview
+
+Summarize the lecture and its main ideas here.
+
 ## Class materials
 
 - [Open the Colab notebook](https://example.com)
@@ -14,7 +18,7 @@ classDate: TBA
 
 ## Why this matters
 
-Write the main idea for the lecture here.
+Explain why the topic matters for autonomous software engineering.
 
 ## In class
 
