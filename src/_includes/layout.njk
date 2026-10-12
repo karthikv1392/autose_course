@@ -20,7 +20,22 @@
         <nav aria-label="Course sections">
           <ul class="libdoc-nav">
             {% for item in site.navigation %}
-              <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+              {% if item.children %}
+                {% set groupActive = false %}
+                {% for child in item.children %}{% if page.url == child.url %}{% set groupActive = true %}{% endif %}{% endfor %}
+                <li>
+                  <details class="libdoc-nav-group"{% if groupActive %} open{% endif %}>
+                    <summary{% if groupActive %} class="is-active"{% endif %}>{{ item.label }}</summary>
+                    <ul class="libdoc-subnav">
+                      {% for child in item.children %}
+                        <li><a href="{{ child.url | url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.label }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </li>
+              {% else %}
+                <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </nav>

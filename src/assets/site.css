@@ -29,6 +29,15 @@ h1, h2, h3, p { margin-top: 0; }
 .libdoc-nav a { display: block; padding: 7px 11px; color: var(--ink); font-size: 14px; text-decoration: none; }
 .libdoc-nav a::before { content: "•"; margin-right: 8px; color: var(--blue); }
 .libdoc-nav a:hover, .libdoc-nav a[aria-current="page"] { color: var(--blue); background: #f1f5fd; }
+.libdoc-nav-group summary { display: flex; align-items: center; padding: 7px 11px; color: var(--ink); font-size: 14px; cursor: pointer; list-style: none; }
+.libdoc-nav-group summary::-webkit-details-marker { display: none; }
+.libdoc-nav-group summary::before { content: "•"; margin-right: 8px; color: var(--blue); }
+.libdoc-nav-group summary::after { content: "▸"; margin-left: auto; color: var(--blue); font-size: 11px; transition: transform .15s; }
+.libdoc-nav-group[open] summary::after { transform: rotate(90deg); }
+.libdoc-nav-group summary:hover, .libdoc-nav-group summary.is-active { color: var(--blue); background: #f1f5fd; }
+.libdoc-nav-group summary:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+.libdoc-subnav { margin: 0 0 4px 22px; padding: 0; list-style: none; }
+.libdoc-subnav a { padding: 5px 11px; font-size: 13px; }
 .libdoc-side-note { position: absolute; bottom: 20px; margin: 0; color: var(--muted); font: 10px/1.5 var(--mono); }
 .libdoc-content { min-width: 0; }
 .libdoc-main { width: min(720px, 100%); padding: 35px 0 45px; }
@@ -104,6 +113,11 @@ code { padding: 1px 4px; background: #f1f5fd; color: var(--ink); font: .9em var(
 .markdown-content pre { overflow-x: auto; padding: 15px; background: #173f73; color: white; }
 .markdown-content pre code { padding: 0; background: transparent; color: inherit; }
 .markdown-content blockquote { margin: 22px 0; padding: 2px 0 2px 16px; border-left: 3px solid var(--blue); color: var(--muted); }
+.markdown-content hr { margin: 40px 0 24px; border: 0; border-top: 1px dashed var(--line); }
+.deadline-box { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px; margin-top: 26px; }
+.deadline-box dd { font-size: 14px; font-weight: 700; }
+.countdown { color: var(--blue); font: 700 20px/1.2 var(--mono); letter-spacing: -.02em; text-align: right; }
+.countdown small { display: block; margin-top: 3px; color: var(--muted); font: 700 10px/1.4 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
 .back-link { margin: 0 0 46px; font-size: 13px; }
 
 /* Prototype-only home treatment */
@@ -154,8 +168,9 @@ code { padding: 1px 4px; background: #f1f5fd; color: var(--ink); font: .9em var(
   .link-grid, .libdoc-toc { grid-template-columns: 1fr; }
   .libdoc-toc a { border-right: 0; border-bottom: 1px dashed var(--line); }
   .libdoc-toc a:last-child { border-bottom: 0; }
-  .libdoc-facts { grid-template-columns: 1fr; gap: 13px; }
+  .libdoc-facts, .deadline-box { grid-template-columns: 1fr; gap: 13px; }
+  .countdown { text-align: left; }
   .libdoc-footer { display: grid; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .libdoc-nav-group summary::after { transition: none; } }

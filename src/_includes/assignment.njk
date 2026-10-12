@@ -1,0 +1,44 @@
+---
+layout: layout.njk
+---
+<article class="assignment-page">
+  <header class="page-header">
+    <p class="eyebrow">Assignment{% if order %} {{ order }}{% endif %}</p>
+    <h1>{{ title }}</h1>
+    {% if description %}<p>{{ description }}</p>{% endif %}
+    {% if due %}
+      <div class="facts-box deadline-box">
+        <dl>
+          <div><dt>Due</dt><dd><time datetime="{{ due }}">{{ dueLabel }}</time></dd></div>
+        </dl>
+        <p class="countdown" data-deadline="{{ due }}" hidden></p>
+      </div>
+    {% endif %}
+  </header>
+  <div class="markdown-content section-rule">
+    {{ content | safe }}
+  </div>
+</article>
+{% if due %}
+<script>
+  (() => {
+    const el = document.querySelector(".countdown");
+    const deadline = Date.parse(el.dataset.deadline);
+    const pad = (n) => String(n).padStart(2, "0");
+    let timer;
+    const tick = () => {
+      const left = deadline - Date.now();
+      if (left <= 0) {
+        el.innerHTML = "Closed<small>Deadline passed</small>";
+        clearInterval(timer);
+        return;
+      }
+      const s = Math.floor(left / 1000);
+      el.innerHTML = Math.floor(s / 86400) + "d " + pad(Math.floor(s / 3600) % 24) + "h " + pad(Math.floor(s / 60) % 60) + "m " + pad(s % 60) + "s<small>Remaining</small>";
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+    el.hidden = false;
+  })();
+</script>
+{% endif %}

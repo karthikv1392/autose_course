@@ -10,6 +10,14 @@ export default {
     { label: "Course team", url: "/team/" },
     { label: "Course plan", url: "/modules/" },
     { label: "Lectures", url: "/lectures/" },
+    {
+      label: "Assignments",
+      children: [
+        { label: "Assignment 1", url: "/assignments/assignment-1/" },
+        { label: "Assignment 2", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+        { label: "Assignment 3", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+      ]
+    },
     { label: "Project", url: "/projects/" },
     { label: "Policy", url: "/policies/" },
     { label: "Tutorials", url: "/tutorials/" },
