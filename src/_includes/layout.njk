@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#173f73">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#173f73" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1424" media="(prefers-color-scheme: dark)">
     <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
     <meta name="description" content="{{ description or site.description }}">
     <meta name="author" content="{{ course.instructor }}">
