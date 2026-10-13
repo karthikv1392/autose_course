@@ -3,7 +3,7 @@ layout: layout.njk
 ---
 <article class="assignment-page">
   <header class="page-header">
-    <p class="eyebrow">Assignment{% if order %} {{ order }}{% endif %}</p>
+    <p class="eyebrow">{% if eyebrow %}{{ eyebrow }}{% else %}Assignment{% if order %} {{ order }}{% endif %}{% endif %}</p>
     <h1>{{ title }}</h1>
     {% if description %}<p>{{ description }}</p>{% endif %}
     {% if due %}

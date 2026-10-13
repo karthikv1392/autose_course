@@ -18,7 +18,7 @@ export default {
         { label: "Assignment 3", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
       ]
     },
-    { label: "Project", url: "/projects/" },
+    { label: "Course Project", url: "/projects/" },
     { label: "Policy", url: "/policies/" },
     { label: "Tutorials", url: "/tutorials/" },
     { label: "Calendar", url: "/calendar/" },

@@ -139,6 +139,9 @@ code { padding: 1px 4px; background: var(--tint); color: var(--ink); font: .9em 
 .markdown-content pre code { padding: 0; background: transparent; color: inherit; }
 .markdown-content blockquote { margin: 22px 0; padding: 2px 0 2px 16px; border-left: 3px solid var(--blue); color: var(--muted); }
 .markdown-content hr { margin: 40px 0 24px; border: 0; border-top: 1px dashed var(--line); }
+.markdown-content table { width: 100%; margin: 22px 0; border-collapse: collapse; font-size: 15px; line-height: 1.45; background: var(--surface); }
+.markdown-content th, .markdown-content td { padding: 9px 12px; border: 1px dashed var(--line); text-align: left; vertical-align: top; }
+.markdown-content thead th { background: var(--tint); }
 .deadline-box { margin-top: 26px; }
 .back-link { margin: 0 0 46px; font-size: 13px; }
 
