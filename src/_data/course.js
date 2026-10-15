@@ -93,7 +93,7 @@ export default {
       { number: 2, date: "Mon, 5 Oct", detail: "Lecture 02 · Introduction to AI Agents" },
       { number: 3, date: "Thu, 8 Oct", detail: "Lecture 03 · Model Context Protocol" },
       { number: 4, date: "Mon, 12 Oct", detail: "Lecture 04 · Memory, Skills and Intro to Specs" },
-      { number: 5, date: "Thu, 15 Oct", detail: "Lecture 05 · Specs to Design" },
+      { number: 5, date: "Thu, 15 Oct", detail: "Lecture 05 · Specifications to Design" },
       { number: 6, date: "Mon, 19 Oct", detail: "Lecture 06 · Agentic Architecting" },
       { number: 7, date: "Thu, 22 Oct", detail: "Lecture 07 · Anatomy of a Coding Agent" },
       { number: 8, date: "Mon, 26 Oct", detail: "Lecture 08" },
