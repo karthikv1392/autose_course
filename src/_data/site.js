@@ -4,7 +4,7 @@ export default {
   description:
     "A project-based course on building harnesses for autonomous software engineering workflows.",
   semester: "Monsoon 2026",
-  institution: "CSE · IIIT Hyderabad",
+  institution: "CS6.403 · IIIT Hyderabad",
   navigation: [
     { label: "Home", url: "/" },
     { label: "Course team", url: "/team/" },
