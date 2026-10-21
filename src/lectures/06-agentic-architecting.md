@@ -12,7 +12,9 @@ This lecture introduces agentic approaches to software architecture, including a
 
 ## Class materials
 
-<p class="notice">Lecture material will be updated soon.</p>
+- [View the lecture slides (PDF)](https://www.dropbox.com/scl/fi/h8qidqvxemzx75ped17ug/L06_Design_ADRs.pdf?rlkey=px6qu02b1yis9djx7snpqcu68&st=3oyw60oj&dl=0)
+
+<p class="notice">Additional lecture material will be updated soon.</p>
 
 ## Further reading
 
