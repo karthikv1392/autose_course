@@ -17,7 +17,7 @@ const html = files.filter((file) => file.endsWith(".html"));
 const css = files.filter((file) => file.endsWith(".css"));
 const js = files.filter((file) => file.endsWith(".js"));
 const homepage = await readFile(path.join(output, "index.html"), "utf8");
-const cssBytes = (await Promise.all(css.map(stat))).reduce((sum, item) => sum + item.size, 0);
+const cssBytes = (await Promise.all(css.map((file) => stat(file)))).reduce((sum, item) => sum + item.size, 0);
 const homepageBytes = (await stat(path.join(output, "index.html"))).size + cssBytes;
 const markup = await Promise.all(html.map((file) => readFile(file, "utf8")));
 const externalRequests = markup.join("\n").match(/<(?:script|img|iframe|link)\b[^>]+(?:src|href)=['"]https?:\/\//gi) || [];
