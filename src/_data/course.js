@@ -97,7 +97,7 @@ export default {
       { number: 6, date: "Mon, 19 Oct", detail: "Lecture 06 · Agentic Architecting" },
       { number: 7, date: "Thu, 22 Oct", detail: "Lecture 07 · Building Coding Agent(s)" },
       { number: 8, date: "Mon, 26 Oct", detail: "Lecture 08 · Coding Agent Patterns" },
-      { number: 9, date: "Thu, 29 Oct", detail: "Lecture 09" },
+      { number: 9, date: "Thu, 29 Oct", detail: "Lecture 09 · Anatomy of Coding Agent(s)" },
       { number: 10, date: "Mon, 2 Nov", detail: "Lecture 10" },
       { number: 11, date: "Thu, 5 Nov", detail: "Lecture 11" },
       { number: 12, date: "Thu, 12 Nov", detail: "Lecture 12" },
