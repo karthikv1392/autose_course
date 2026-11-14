@@ -143,6 +143,17 @@ code { padding: 1px 4px; background: var(--tint); color: var(--ink); font: .9em 
 .markdown-content th, .markdown-content td { padding: 9px 12px; border: 1px dashed var(--line); text-align: left; vertical-align: top; }
 .markdown-content thead th { background: var(--tint); }
 .deadline-box { margin-top: 26px; }
+.markdown-content > .flow-diagram { max-width: none; margin: 28px 0; }
+.flow-diagram-scroll { overflow-x: auto; padding: 14px; border: 1px dashed var(--line); background: var(--surface); }
+.flow-diagram svg { display: block; width: 100%; min-width: 620px; height: auto; font-family: var(--sans); }
+.flow-diagram figcaption { margin-top: 8px; color: var(--muted); font-size: 13px; }
+.flow-box rect { fill: var(--surface-strong); stroke: var(--line); stroke-width: 1.5; }
+.flow-box text { fill: var(--muted); font-size: 18px; text-anchor: middle; }
+.flow-box .flow-title { fill: var(--ink); font-size: 21px; font-weight: 700; }
+.flow-accent rect { fill: var(--tint); stroke: var(--blue); stroke-width: 2.5; }
+.flow-edges path { fill: none; stroke: var(--muted); stroke-width: 1.5; }
+.flow-head { fill: var(--muted); }
+.flow-labels text { fill: var(--muted); font-size: 17px; }
 .back-link { margin: 0 0 46px; font-size: 13px; }
 
 /* Prototype-only home treatment */
