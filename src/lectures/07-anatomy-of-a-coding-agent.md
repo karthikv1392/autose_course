@@ -10,10 +10,6 @@ classDate: 22 October 2026
 
 This guest session, "Forged, not typed," walks through building AutoSE with LLMs, where more effort went into designing, testing and redesigning than coding. It covers the autonomy dial, decision-record driven development, architectural practices that keep generated code in shape, a worked feature example, and lessons from evaluating and upgrading the agent's architecture.
 
-## Class materials
-
-- [View the lecture slides (PDF)](/assets/lectures/07-anatomy-of-a-coding-agent.pdf)
-
 ## Why this matters
 
 As agents take on more of the implementation work, the engineering effort shifts from writing code to deciding what should exist: recording intent, constraining agents with structure rather than prompts, enforcing rules with tests, and designing for an agent you don't fully trust.

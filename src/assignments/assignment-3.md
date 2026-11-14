@@ -20,7 +20,7 @@ The assignment was released on Friday 13th November. The course extension policy
 
 ## Your Mission, Should You Choose to Accept It
 
-The workflow should live in `.github/workflows/` in your fork. The sketch below shows how the workflow is triggered, and you decide how the rest of it is built.
+The workflow should be in `.github/workflows/`. The sketch below shows how the workflow is triggered.
 
 ```yaml
 # .github/workflows/autose.yml  (a sketch, not a template)
@@ -37,7 +37,7 @@ jobs:
   # your design: one job or several, one agent or many, chained how you choose
 ```
 
-After it starts, the workflow should go through the six stages in the table below on its own, without help from a person. The stages themselves are fixed, and you decide how your agents carry them out. Each stage should save its output, called an artifact, as a file on the branch, a comment or a workflow artifact. A stage should hand over to the next one only after its check in the last column has passed.
+After the workflow starts, it should go through the six stages in the table below. The stages themselves are fixed, but you decide how your agents carry them out. Each stage should save its output as an artifact, as described in the table. A stage should hand over to the next one only after its check in the last column has passed.
 
 | # | Stage | What the agent does | Artifact | Check before moving on |
 | --- | --- | --- | --- | --- |
@@ -50,13 +50,13 @@ After it starts, the workflow should go through the six stages in the table belo
 
 If a stage cannot pass its check, it should explain why in its artifact and stop the run. A stage can also send work back to an earlier stage when needed. For example, if tests keep failing, the design may need to change, and if the reviewer disagrees with the approach, the workflow should return to the design stage.
 
-**Starting from a pull request.** If someone starts the workflow on an open pull request, the workflow should treat the PR description and its unresolved review comments as the task. It can then either push to the same branch or open a new pull request. Tell us which option you chose and why.
-
 **Keeping the reviewer independent.** The reviewer should only see the issue, the diff and the repository at the latest commit of the pull request, and it can run the code itself if it wants to. It should not see the implementer's conversation or reasoning. Give the reviewer its own prompt and permission to read and run code, but not to push. You can use a different model for the reviewer if you like, although this is not required. In your report, explain how you make sure the reviewer does not simply agree with the implementer.
 
 ## The Heart of It: Your Architecture and Why
 
-This section carries most of the marks. We would rather see a workflow that only partly works but comes with a clear, evidence-based explanation of its design than one that works but cannot explain why it is built the way it is. The diagram below shows one possible design, and you do not have to follow it. You can use one agent or many, and a fixed pipeline or a planner that decides what to do next, as long as you can explain your choice.
+We would rather see a workflow that only partly works but comes with a clear, evidence-based explanation of its design than one that works but cannot explain why it is built the way it is. The diagram below shows one possible design, for reference. You can use one agent or many, and a fixed pipeline or a planner that decides what to do next, as long as you can explain your choice.
+
+Whatever design you choose, it must keep the six stages and their checks, use a reviewer that is independent of the other agents, and leave the final merge decision to a person.
 
 <figure class="flow-diagram">
 <div class="flow-diagram-scroll">
@@ -97,13 +97,11 @@ This section carries most of the marks. We would rather see a workflow that only
 <figcaption>The system runs every SDLC stage itself; a human only decides at the end.</figcaption>
 </figure>
 
-Whatever design you choose, it must keep the six stages and their checks, use a reviewer that is independent of the other agents, and leave the final merge decision to a person.
-
 ### Decisions to Justify
 
 Write an ADR for at least 8 of the following 10 decisions.
 
-| # | Decision | Questions to answer |
+| # | Decision | Questions to answer (these are the bare minimum, and we expect you to go beyond them) |
 | --- | --- | --- |
 | D1 | Splitting the work | How many agents do you use, and which stages does each one handle? Why is this better than using one agent for everything or one agent per stage? |
 | D2 | Control flow | How is the workflow controlled, for example as a fixed pipeline, an orchestrator with workers, a state machine, or separate Actions jobs that trigger each other? Who decides when to go back to an earlier stage? |
@@ -116,7 +114,7 @@ Write an ADR for at least 8 of the following 10 decisions.
 | D9 | Safety and failures | How do you handle budgets, timeouts, GitHub Actions limits and stages that get stuck? Since anyone can write an issue, how do you protect against prompt injection? |
 | D10 | Triggers | Which events start the workflow, and who is allowed to start it? What happens if two runs start at the same time? |
 
-**ADR format.** Follow the ADR format from A2, and add a status and a pattern to each one. Each ADR should describe the context, at least two realistic options, the decision, the reasons for it, and its consequences and trade-offs. The status is *Verified* if a run or experiment supports the decision (include the link), or *Inferred* if it is based on reasoning alone. The pattern is the one from the course pattern repository that the decision applies, if there is one. Please make sure that the options you rejected are realistic alternatives, since an ADR that compares against an obviously bad option tells us very little.
+**ADR format.** Follow the Nygard ADR format from A2.
 
 **Architecture views.** Along with the ADRs, include a component view showing the agents, their tools and how they call each other, a sequence view showing one real run from the trigger to the review, and a table that lists the agent, artifact and check for each stage.
 
@@ -150,9 +148,11 @@ Write an ADR for at least 8 of the following 10 decisions.
 5. Hindsight (half a page). If you started again tomorrow, which decision would you change first, and why?
 6. Limitations and threats to validity (at least three).
 
-**Demo video** (at most 5 minutes). Show one complete run, from the issue page to the posted review. We enjoy videos that are engaging and insightful, and we find fully AI-generated videos boring.
+**Demo video** (at most 5 minutes). Show one complete run, from the issue page to the posted review. Brownie points for engaging and insightful videos.
 
-**Submission.** Submit a file named `roll_number_a3_AutoSE.txt` that contains only the GitHub link to your repository. Your repository should be organised as follows.
+**Submission.** Submit a file named `roll_number_a3_AutoSE.txt` that contains only the GitHub link to your repository.
+
+Your repository should be organised as follows.
 
 ```
 README.md            # fork URL + commit, models, how to trigger the workflow
