@@ -13,6 +13,7 @@ This lecture explores autonomous testing: how agents can generate, run, and inte
 ## Class materials
 
 - [View the lecture slides (PDF)](https://www.dropbox.com/scl/fi/swyw3fzcyz8cllo0hsu0r/L12_Agentic_Testing.pdf?rlkey=h4m92ojc8sdn7baaafvhhgbby&st=497onsdz&dl=0)
+- [Open the hands-on Colab notebook](https://colab.research.google.com/drive/1s8ndkNV17S4CrKG5atERAbogizK8j26Q?usp=sharing)
 
 ## Further reading
 
