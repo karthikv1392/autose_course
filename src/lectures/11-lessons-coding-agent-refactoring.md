@@ -12,7 +12,7 @@ This hands-on session, "Forged, not typed," walks through building AutoSE with L
 
 ## Class materials
 
-- [View the lecture slides (PDF)]({{ '/assets/lectures/11-lessons-coding-agent-refactoring.pdf' | url }})
+- [View the lecture slides (PDF)](https://www.dropbox.com/scl/fi/z48zbl0ydusq4ex2swk0g/L11_Lessons_Coding_Agents_Refactoring.pdf?rlkey=dhsm0qsxmxhp5xih38jehaux4&st=l9watufp&dl=0)
 
 ## Further reading
 
