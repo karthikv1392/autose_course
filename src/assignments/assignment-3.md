@@ -144,7 +144,7 @@ Write an ADR for at least 8 of the following 10 decisions.
 1. Architecture (2 pages). Your three views, and which agent handles each stage.
 2. Design decisions (2.5 pages). A table that summarises all your ADRs, showing for each one the decision, the option you chose, the main option you rejected, the main reason and the status. After the table, discuss the three decisions that mattered most. The full ADRs go in `decisions/`.
 3. Decision experiments (1.5 pages). The two ADRs you tested, their results side by side, and what you changed in your design as a result.
-4. Results (1 page). The pass rate for each stage, the results of the hidden tests, what the reviewer caught and where it was wrong, and the `MERGE_READINESS_CHECK`.
+4. Results (1 page). The pass rate for each stage, the results of the hidden tests, and what the reviewer caught and where it was wrong.
 5. Hindsight (half a page). If you started again tomorrow, which decision would you change first, and why?
 6. Limitations and threats to validity (at least three).
 
